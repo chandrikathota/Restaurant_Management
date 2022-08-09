@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <title>User Catalog</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'styles/user_catalog.css' %}">
+    <link rel="stylesheet" type="text/css" href="user_catalog.css">
+     
 </head>
 <body>
     <div class="banner-img">
@@ -31,7 +32,7 @@
     <br>
 
     <div class="items-container">
-        <table class="items-table">
+        <table class="items-table" >
             <tr>
                 <th>Item Name</th><th>Description</th><th>Price</th><th>Quantity</th><th>Click to Order</th>
             </tr>
@@ -39,21 +40,38 @@
                 <td>Dosa</td><td> dosa is a healthy breakfast option</td><td>Rs.50</td>
                 <td>
                     <div class="wrapper">
-                        <span class="minus">-</span>
-                        <span class="1">1</span>
-                        <span class="plus">+</span>
+                        <span class="minus"><span>-</span></span>
+                        <span class="num"></span>
+                        <span class="plus"><span>+</span></span>
                     </div>
                 </td>
                 <td><button class="add-btn">+Add</button></td>
+            </tr>
+            
+            
             
             
             
         </table>
     </div>
     <footer class="footer">
+        <label class="total_price-lbl">Total Price:</label><input class="total_price" type="text" name="total_price" value="Rs.500"  readonly>
         <button class="place-odr-btn">Place order</button>
 
     </footer>
     
 </body>
 </html>
+<script>
+    const plus=document.querySelector('.plus');
+const minus=document.querySelector('.minus');
+const num=document.querySelector('.num');
+num.innerHTML=1;
+update=(n) =>{
+    num.innerHTML=(n<10 && n>0) ? `${n}` : n;
+}
+
+let a=1;
+plus.addEventListener('click',() => update(++a));
+minus.addEventListener('click',() => update(--a));
+</script>

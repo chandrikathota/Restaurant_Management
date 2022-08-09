@@ -88,8 +88,10 @@ h1{
     margin-top: 40px;
     text-align: center;
 }
-table{
+table,td,th{
     align-items: center;
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 .items-table tr{
     margin: 30px;
@@ -128,6 +130,7 @@ table{
     height: 60px;
     right: auto;
     left: auto;
+    display: inline;
 }
 .footer .place-odr-btn{
     cursor: pointer;
@@ -145,3 +148,66 @@ table{
 .footer .place-odr-btn:hover{
     background-color: rgb(248, 136, 161);
 }
+.footer .total_price{
+    margin-left: 30px;
+    margin-top: 3px;
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    font-family: 'inter','serif';
+    font-size: 20px;
+    font-weight: bold;
+    border-color: brown;
+    background-color: bisque;
+    padding: 20px;
+}
+.footer .total_price-lbl{
+    margin-left: 800px;
+    font-family: 'inter','serif';
+    font-size: large;
+    font-size: 25px;
+}
+.wrapper{
+    border: none;
+    display: flex;
+    align-items: center;
+    padding-right: -30px;
+    margin-right: -55px;
+    margin-left: 10px;   
+}
+.wrapper .minus, .plus{
+    width: 30px;
+    height: 30px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+}
+.wrapper .minus{
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+.wrapper .plus{
+    padding-left: 7px;
+}
+.wrapper .num{
+    background-color: aliceblue;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 35px;
+    margin: 0 10px;
+    font-size: 20px;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.minus ,.plus span{
+    font-size: 28px;
+    font-weight: bolder;
+}
+
