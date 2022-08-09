@@ -128,9 +128,7 @@ table,td,th{
     padding: 10px 10px 0px 10px;
     position: fixed;
     height: 60px;
-    right: auto;
-    left: auto;
-    display: inline;
+    display: inline-flex;
 }
 .footer .place-odr-btn{
     cursor: pointer;
@@ -148,18 +146,23 @@ table,td,th{
 .footer .place-odr-btn:hover{
     background-color: rgb(248, 136, 161);
 }
+.total_price_part{
+    background-color: aqua;
+    display: inline;
+}
 .footer .total_price{
-    margin-left: 30px;
-    margin-top: 3px;
-    width: 160px;
-    height: 30px;
-    text-align: center;
-    font-family: 'inter','serif';
+    background-color: aliceblue;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 35px;
+    margin: 0 10px;
     font-size: 20px;
+    color: black;
+    border-radius: 10px;
     font-weight: bold;
-    border-color: brown;
-    background-color: bisque;
-    padding: 20px;
 }
 .footer .total_price-lbl{
     margin-left: 800px;
@@ -209,5 +212,8 @@ table,td,th{
 .minus ,.plus span{
     font-size: 28px;
     font-weight: bolder;
+}
+textarea{
+    resize: none;
 }
 
